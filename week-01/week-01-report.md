@@ -47,14 +47,16 @@ extension php on visual code
 
 
 ## MySQLDB
+για την αποθηκευση των δεδομένων των βιβλίων 
 
+steps:
 site: https://dev.mysql.com/downloads/installer/   install last
 
 
 open file, select: full, steps: next, execute in order to be installed products
 
 
-
+create your account and finish the installation
 
 
 ## Apache
@@ -63,4 +65,4 @@ open file, select: full, steps: next, execute in order to be installed products
 
 
 
-Τέλος, πέρα από το κομμάτι της πληροφορικής, εργαστήκαμε σε excel, RFID για την καλύτερη οργάνωση-ταξινόμηση των βιβλίων της βιβλιθήκης 
+Τέλος, πέρα από το κομμάτι της πληροφορικής, εργαστήκαμε σε excel με στόχο την καταμέτρηση των βιβλίων και την καλύτερη οργάνωση-ταξινόμηση των βιβλίων της βιβλιθήκης και RFID για  την γρήγορη αναζήτηση όποιου βιβλίου. Τι είναι το RFID?
