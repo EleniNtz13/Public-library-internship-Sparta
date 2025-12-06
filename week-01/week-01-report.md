@@ -48,6 +48,10 @@ extension php on visual code
 
 ## MySQLDB
 
+site: https://dev.mysql.com/downloads/installer/   install last
+
+
+open file, select: full, steps: next, execute in order to be installed products
 
 
 
