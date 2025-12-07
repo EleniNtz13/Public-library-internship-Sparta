@@ -260,6 +260,7 @@ Ensure that the following lines exist **without the # symbol** (uncommented):
 *PHPIniDir "C:/php"*
 
 
+
 These lines tell Apache how to load the PHP module and where to find the PHP configuration.
 
 Save the file.
