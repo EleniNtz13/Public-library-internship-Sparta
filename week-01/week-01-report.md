@@ -135,7 +135,7 @@ You should now see the displayed messages:
 
 
 
----
+--
 
 After setting up the basic web servers using Python and PHP, the next step was to prepare the environment required for data storage and dynamic content management. For this purpose, a relational database system was introduced, using MySQL, which allows the application to store, retrieve, and manage library-related data efficiently (such as book information, categories, and user activity).
 
@@ -192,6 +192,7 @@ Choose the default configuration options
 Finalize the installation
 
 When the process finishes, MySQL Workbench will be available for use.
+
 
 
 
