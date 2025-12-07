@@ -7,7 +7,7 @@ The first week focused on creating a basic web server that displays predefined m
 
 Create a folder named **Project_Folder** in the path:
 
-*C:\*
+***C:\**
 
 #### 2. Create the Python File (app.py)
 
