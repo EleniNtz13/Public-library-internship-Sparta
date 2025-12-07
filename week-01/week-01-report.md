@@ -57,7 +57,7 @@ Then run:
 
 If everything is set up correctly, the terminal will display a line similar to:
 
-*Running on http://127.0.0.1:5000/*
+*Running on http://localhost:5000/*
 
 
 Open that URL in your browser, and the page will display the messages:
@@ -71,58 +71,90 @@ Open that URL in your browser, and the page will display the messages:
 
 
 
+2️⃣ PHP Setup
+1. Download and Install PHP
+
+Go to the official PHP for Windows download page:
+
+https://windows.php.net/download/
+
+
+Download the Thread Safe ZIP package for your system and extract the files into a new folder named php in:
+
+C:\
+
+
+After extraction, your folder should look like:
+
+C:\php\
+
+2. Create the PHP File (index.php)
+
+Inside the C:\php folder, create a new file named index.php using Notepad.
+Select "All Files" when saving, and paste the PHP code provided in the week-01 folder.
+
+Example structure:
+
+C:\php\
+   └── index.php
+
+3. Install the PHP Extension in Visual Studio Code
+
+Open Visual Studio Code → Go to Extensions → Install the extension named "PHP"
+(This enables syntax highlighting and support for PHP code.)
+
+4. Run the PHP Development Server
+
+Open Command Prompt and navigate to the PHP folder:
+
+cd C:\php
+
+
+Start the built-in PHP development server:
+
+php -S localhost:8080
+
+
+If everything is correct, the server will start on port 8080.
+
+5. Open the Web Page in Your Browser
+
+Open your browser and visit:
+
+http://localhost:8080
+
+
+You should now see the displayed messages:
+
+Hello!
+
+Welcome!
+
+This is a message.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Η πρώτη εβδομάδα ξεκίνησε με στόχο την δημιουργία ενός web server ο οποίος θα εμφανίζει συγκεκριμένα μηνύματα σε web pages και θα τρέχει σε γλώσσες python και php. Αρχικά, τα βήματα για την εγκατάσταση των γλωσσών προγραμματισμού python & php, είναι τα παρακάτω:
-
-
-## 1️⃣ Python
-
-- Δημιουργία φακέλου με όνομα: "Project_Folder" στο path C:\
-- Δημιουργία αρχείου στο notepad με όνομα: "app.py", όπου αποθηκεύεις τον αντίστοιχο κώδικα python που φαίνεται στον φάκελο "week-01" και επιλέγοντας "ολα τα αρχεία" αποθηκεύεις το αρχείο αυτό στον φάκελο "Project_Folder"
-- Στον φακελο "Project_Folder", δημιουργείς καινούριο φάκελο με όνομα: "templates". Στον φάκελο "templates", με χρήση του notepad δημιουργείς ένα αρχείο με όνομα: "index.html" όπου αποθηεκύεις τον κώδικα που φαίνεται στον φάκελο "week-01", έχοντας επιλέξει "όλα τα αρχεία"
-- Για την εγκατασταση του flask, ανοίγεις τον command prompt, όπου εισάγεις την εντολή: "install flask set FLASK_APP=app.py"
-- Εφόσον είναι εγκατεστημένο στον υπολογιστή σου το Visual Studio Code (αν δεν υπάρχει, χρειάζεται να το εγκαταστήσεις), στα αριστερά στα "extensions" χρειάζεται να εγκαταστήσεις το "extension python"
-- Ανοίγεις το αρχείο με τον κώδικα "app.py" και τρέχεις είτε στο terminal του VS code την εντολή: "python app.py" είτε στο cmd του υπολογιστή σου: "cd C:\Users..." εισάγοντας το path που δείχνει στον φάκελο και τρέχεις "python app.py"
--  Αν όλα έχουν πάει καλά, μετά το run, εμφανίζεται το κατάλληλο url: "http:..." το οποίο περνώντας το σε έναν browser εμφανίζονται τα μηνύματα "Hello!" "Welcome!" "This is a message."
 
 
 ## gia php
 
-https://windows.php.net/download/  install php
+στον σύνδεσμο: https://windows.php.net/download/ -> install php
 
-δημιουργία φακελου PHP στο path C:\php, extract all files there
-
+δημιουργία φακελου php στο path C: όπου κάνεις extract all files there
 
 στον ίδιο φάκελο δημιουργείς αρχείο index.php all files με τον κώδικα php
 
+εγκαθιστάς το extension php στο visual code
 
-extension php on visual code
+στο τερματικό στο cmd -> cd C:\... ekei pou einai o fakelos αλλάζεις το directory και τρεχεις php -S localhost:8080
 
-php -S localhost:8080
+παιρνεις το localhost και το περνάς στον browser και εμφανιζει τα μηνύματα 
+**Hello!**
 
-στο cmd -> cd C:\... ekei pou einai o fakelos 
+**Welcome!**
 
-παιρνεις το localhost και το περνάς στον browser και εμφανιζει τα μηνύματα
+**This is a message.**
 
 
 
@@ -208,3 +240,5 @@ if it is ok, then open browser -> http://.../info.php -> and appears php informa
 
 
 Τέλος, πέρα από το κομμάτι της πληροφορικής, εργαστήκαμε σε excel με στόχο την καταμέτρηση των βιβλίων και την καλύτερη οργάνωση-ταξινόμηση των βιβλίων της βιβλιθήκης και RFID για  την γρήγορη αναζήτηση όποιου βιβλίου. Τι είναι το RFID?
+
+μήπως να γραψω λίγα λόγια γιατί το κάνουμε όλο αυτό; κάθετι που κάνουμε
