@@ -12,7 +12,7 @@ During the first week of the internship, we set up the basic tools to create sim
 
 Together, these tools form a simple development stack that allows message display, data management, and local web server operation — forming the foundation for more advanced features in the library system.
 
-Below are the steps followed to install the required programming environments and set up both the Python and PHP versions of the project.
+Below are the steps to install and set up the development environments for both Python and PHP.
 
 ## 1️⃣ Python Setup
 ### 1. Create the Project Folder
