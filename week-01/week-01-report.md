@@ -19,7 +19,7 @@ Below are the steps followed to install the required programming environments an
 
 Create a folder named **Project_Folder** in the path:
 
-C:\
+`C:\`
 
 ### 2. Create the Python File (app.py)
 
