@@ -1,15 +1,15 @@
-# Week 1 – Overview: Development Stack
+# 🌟 Week 1 – Overview: Development Stack
 
 During the first week of the internship, we set up the basic tools to create simple web applications. 
 The goal was to build two small web servers (Python and PHP) and connect them with a MySQL database and Apache HTTP Server to create a complete development environment.
 
-- **Python (Flask)**: Lightweight server for displaying messages and handling HTML templates (```localhost:5000```).
+- 🐍 **Python (Flask)**: Lightweight server for displaying messages and handling HTML templates (```localhost:5000```).
 
-- **PHP**: Runs via the built-in PHP server (```localhost:8080```) or through Apache for a more production-like setup (```localhost:80```).
+- 🐘 **PHP**: Runs via the built-in PHP server (```localhost:8080```) or through Apache for a more production-like setup (```localhost:80```).
 
-- **Apache HTTP Server**: Provides a stable environment to serve PHP pages.
+- ⚡ **Apache HTTP Server**: Provides a stable environment to serve PHP pages.
 
-- **MySQL Database**: Stores and manages data such as books, users, and categories.
+- 💾 **MySQL Database**: Stores and manages data such as books, users, and categories.
 
 Together, these tools form a simple development stack that allows message display, data management, and local web server operation — forming the foundation for more advanced features in the library system.
 
@@ -29,13 +29,13 @@ Save the file inside ```Project_Folder```, making sure to select **"All Files"**
 
 ### 3. Create the Templates Folder and HTML File
 
-Inside **Project_Folder**, create a new folder named ```templates```.
+Inside **Project_Folder**, create a new folder named ```templates```📂.
 Open Notepad again and create a file named ```index.html```.
 Paste the corresponding HTML code (also available in the ```week-01``` folder), select **"All Files"**, and save it inside the ```templates``` folder.
 
 ### 4. Install Flask
 
-Open **Command Prompt** and install Flask by running:
+Open **Command Prompt** 💻 and install Flask by running:
 
 ```pip install flask```
 
@@ -46,7 +46,7 @@ Then set the Flask application environment variable:
 ### 5. Install Python Extension in Visual Studio Code
 
 If Visual Studio Code is not installed, download and install it.
-Inside VS Code, go to **Extensions** (left sidebar) and install the **Python extension**.
+Inside VS Code, go to **Extensions** 🔌 (left sidebar) and install the **Python extension**.
 
 ### 6. Run the Application
 
@@ -73,11 +73,11 @@ If everything is set up correctly, the terminal will display a line similar to:
 
 Open that URL in your browser, and the page will display the messages:
 
-**Hello!**
+👋 **Hello!**
 
-**Welcome!**
+🎉 **Welcome!**
 
-**This is a message.**
+📝 **This is a message.**
 
 
 ## 2️⃣ PHP Setup
@@ -105,11 +105,11 @@ C:\php\
 
 ### 3. Install the PHP Extension in Visual Studio Code
 
-Open Visual Studio Code → Go to **Extensions** → Install the extension named **PHP** (this enables syntax highlighting and support for PHP code)
+Open Visual Studio Code → Go to **Extensions** 🔌 → Install the extension named **PHP** (this enables syntax highlighting and support for PHP code)
 
 ### 4. Run the PHP Development Server
 
-Open **Command Prompt** and type:
+Open **Command Prompt** 💻 and type:
 
 ```
 cd C:\php
@@ -128,17 +128,17 @@ Open your browser and visit:
 
 You should now see the displayed messages:
 
-**Hello!**
+👋 **Hello!**
 
-**Welcome!**
+🎉 **Welcome!**
 
-**This is a message.**
+📝 **This is a message.**
 
 ---
 
-After setting up the basic web servers using Python and PHP, the next step was to prepare the environment required for data storage and dynamic content management. For this purpose, a relational database system was introduced, using **MySQL**, which allows the application to store, retrieve, and manage library-related data efficiently (such as book information, categories, and user activity).
+After setting up the basic web servers using Python and PHP, the next step was to prepare the environment required for data storage and dynamic content management. For this purpose, a relational database system was introduced, using 💾 **MySQL**, which allows the application to store, retrieve, and manage library-related data efficiently (such as book information, categories, and user activity).
 
-Additionally, the setup process included the installation and configuration of the Apache HTTP Server, which provides a stable, production-level environment for serving PHP applications. Apache enables the web server to deliver PHP pages reliably and is commonly used in combination with MySQL to create full-stack web applications.
+Additionally, the setup process included the installation and configuration of the ⚡ **Apache HTTP Server**, which provides a stable, production-level environment for serving PHP applications. Apache enables the web server to deliver PHP pages reliably and is commonly used in combination with MySQL to create full-stack web applications.
 
 The following sections describe the installation steps for **MySQL** and **Apache**, as well as how they integrate with the overall project architecture.
 
@@ -146,8 +146,8 @@ The following sections describe the installation steps for **MySQL** and **Apach
 ## 3️⃣ MySQL Database (MySQL Server)
 
 **MySQL**: 
-- is one of the most widely used relational database systems, ideal for web applications like the ones developed during this project
-- is used to store, retrieve, and manage data such as book information, categories, and user activity
+- 💾 is one of the most widely used relational database systems, ideal for web applications like the ones developed during this project
+- 🗄️ is used to store, retrieve, and manage data such as book information, categories, and user activity
 
 ## Installation Steps (Windows)
 ### 1. Download MySQL Installer
@@ -193,8 +193,8 @@ When the process finishes, MySQL Workbench will be available for use.
 ## 4️⃣ Apache HTTP Server Setup (Without XAMPP/WAMP)
 
 **Apache**:
-- is one of the most widely used web servers globally and serves as the backbone for running PHP applications in a stable, production-style environment
-- In this project, Apache is used to process and serve PHP pages directly from the local machine, creating a fully functional local web server setup
+- ⚡ is one of the most widely used web servers globally and serves as the backbone for running PHP applications in a stable, production-style environment
+- 🖥️ In this project, Apache is used to process and serve PHP pages directly from the local machine, creating a fully functional local web server setup
 
 ## Installation Steps:
 ### 1. Download Apache
@@ -265,7 +265,7 @@ These lines tell Apache how to load the PHP module and where to find the PHP con
 
 ### 4. Install and Start the Apache Service
 
-- Open **Command Prompt as Administrator** and run:
+- Open **Command Prompt as Administrator** 💻 and run:
 
 #### Install Apache as a service:
 ```
@@ -293,7 +293,7 @@ If everything is correct, the server will start without errors.
 
 If Apache is running successfully, you should see the message:
 
-**It works!**
+**It works!** ✅
 
 ### ✔ Important Note
 
@@ -307,12 +307,9 @@ C:\Apache24
 **Note**: All servers run on localhost and are only accessible from your local machine. They are not exposed to the internet.
 
 
-| Server | Technology | Port |
-| ------ | ---------- | ---- |
-| Flask  | Python     | 5000 |
-| PHP    | Built-in   | 8080 |
-| Apache | PHP        | 80   |
-
-
-
+| Server   | Technology | Port |
+| -------- | ---------- | ---- |
+| 🐍 Flask | Python     | 5000 |
+| 🐘 PHP   | Built-in   | 8080 |
+| ⚡ Apache | PHP        | 80  |
 
