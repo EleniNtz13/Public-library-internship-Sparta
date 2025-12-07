@@ -36,7 +36,7 @@ Paste the corresponding HTML code (also available in the **week-01** folder), se
 
 Open **Command Prompt** and install Flask by running:
 
-```pip install flask
+```pip install flask```
 
 Then set the Flask application environment variable:
 
