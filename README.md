@@ -9,8 +9,8 @@ Welcome to the repository documenting my internship experience!
 
 ## 📅 Internship Details
 
-- **Organization / Company:** [**Sparta Public Library**]  
-- **Location:** [**Sparta**]  
+- **Organization / Company:** [Sparta Public Library]  
+- **Location:** [Sparta]  
 - **Start Date:** [01/12/2025]  
 - **End Date:** [28/02/2026]  
 - **Duration:** [12 weeks/3months]  
