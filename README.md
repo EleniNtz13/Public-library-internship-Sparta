@@ -13,7 +13,7 @@ Welcome to the repository documenting my internship experience!
 - **Location:** [Sparta]  
 - **Start Date:** [01/12/2025]  
 - **End Date:** [28/02/2026]  
-- **Duration:** [12 weeks/3months]  
+- **Duration:** [12 weeks/3 months]  
 - **Supervisor / Mentor:** [Library Director]  
 
 ---
