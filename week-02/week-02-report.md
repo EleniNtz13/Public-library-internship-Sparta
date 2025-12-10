@@ -78,7 +78,7 @@ cmd ->python --version an einai ok tote einai egkatestimenh h python diaforetika
 
 στο ιδιο cmd as admin python -m venv venv 
 venv\scripts\activate
-
+(το venv χρειαζεται ωστε να ριναι ενεργοποιημένο)
 
 cd C:\Users\...
 
