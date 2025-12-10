@@ -102,12 +102,7 @@ python manage.py runserver
 
 python manage.py startapp my_app το οποιο δημιουργεί φακελο μεσα στο myproject
 
-με την εντολη: code .      
-
-
-
-
-να φτιαξω μια πρριληψη που θα συνδεει ολο το report auto 
+με την εντολη: code .       
 
 ανοιγει ο φακελος myapp kai myproject στο vs code 
 
@@ -136,3 +131,10 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
+
+
+---
+
+
+*να φτιαξω μια πρριληψη που θα συνδεει ολο το report auto*
+*να αναφερθούν τα ονοματα των παιδιων που συνεργαστηκαμε μαζι για το ολο αυτο project?*
