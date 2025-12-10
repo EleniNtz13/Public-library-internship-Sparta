@@ -106,6 +106,64 @@ python manage.py startapp my_app το οποιο δημιουργεί φακελ
 ## επιμενο βημα για την δημιουργία φόρμας
 
 
+εγκατάσταση postgresql απο το αντιστοιχο site για windows
+
+ανοίγεις το αρχειο, ναι σε ολα 
+
+αφηνεις επιλεγμενα τα by default οτι εμφανίσει δηλαδή 
+
+διαλέγεις φακελο εγκατάστασης οτι εμφανισει τον αντίστοιχο 
+
+βαζεις password 
+
+αφηνεις το port ως εχει 5432
+
+αφηνεις default 
+
+next, next, install and finish 
+
+
+στο πλαίσιο PostgresSQL 18(X64) on port 5432
+
+
+next cancel close
+
+sto start, pgAdmin4
+
+servers, password 
+
+στο databases δεξι κλικ create -> database δίνεις ονομα και save 
+
+## συνδεση Django με postresql 
+
+στο ιδιο cmd εκει που υπάρχει το manage.py γραψε: 
+pip install psycopg2-binary
+
+an einai ok sinexizoyme
+
+δίνεις τα στοιχεια της βασης:
+database name: library_db
+user: postgres
+password: ότι εβαλες ξατα την εγκατάσταση της postresql 
+Host: localhost 
+Port: 5432
+
+άνοιξε το αρχειο settings.py
+
+στο σημειο DATABASES={7 γραμμές}
+αντικτεστησε απο το σημειο με το ονομα 
+'NAME': 'library_db',
+και προσθεσε τα υπολοιπα στοιχεια που ριναι παραπάνω οπως ακριβως και αυτο 
+
+
+στο ιδιο cmd τρέξε 
+python manage.py migrate 
+για να δημιουργηθουν τα tables στην βάση 
+
+
+στο cmd 
+python manage.py startapp library 
+
 
 
 
@@ -135,6 +193,6 @@ class Book(models.Model):
 
 ---
 
-
+*ν ελέγχω ταβηματα αν ειανι σωστά*
 *να φτιαξω μια πρριληψη που θα συνδεει ολο το report auto*
 *να αναφερθούν τα ονοματα των παιδιων που συνεργαστηκαμε μαζι για το ολο αυτο project?*
