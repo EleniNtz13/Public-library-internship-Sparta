@@ -85,7 +85,7 @@ cd C:\Users\...
 
 pip install django
 
-αν κατεβηκε επιτυχώς τοτε django_admin startproject myproject που το myproject ειναι ο καινουριος φακελος που δημιουργήθηκε στο path που ειναι ο cmd 
+αν κατεβηκε επιτυχώς τοτε django-admin startproject myproject που το myproject ειναι ο καινουριος φακελος που δημιουργήθηκε στο path που ειναι ο cmd 
 
 cd myproject
 
