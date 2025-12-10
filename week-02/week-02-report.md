@@ -114,3 +114,25 @@ python manage.py startapp my_app το οποιο δημιουργεί φακελ
 
 
 
+from django.db import models
+
+class Book(models.Model):
+    entry_number = models.IntegerField()  # Αριθμός εισαγωγής
+    entry_date = models.DateField()       # Ημερομηνία εισαγωγής
+    author = models.CharField(max_length=255)  # Συγγραφέας
+    koha_author = models.CharField(max_length=255, blank=True, null=True)  # Συγγραφέας Koha
+    title = models.CharField(max_length=255)   # Τίτλος
+    publisher = models.CharField(max_length=255, blank=True, null=True)  # Εκδότης
+    edition = models.CharField(max_length=255, blank=True, null=True)    # Έκδοση
+    publish_year = models.IntegerField(blank=True, null=True)  # Έτος έκδοσης
+    publish_place = models.CharField(max_length=255, blank=True, null=True)  # Τόπος έκδοσης
+    shape = models.CharField(max_length=255, blank=True, null=True)  # Σχήμα
+    pages = models.CharField(max_length=50, blank=True, null=True)  # Σελίδες
+    volume = models.CharField(max_length=50, blank=True, null=True) # Τόμος
+    notes = models.TextField(blank=True, null=True)                 # Παρατηρήσεις
+    isbn = models.CharField(max_length=50, blank=True, null=True)   # ISBN
+    column1 = models.CharField(max_length=255, blank=True, null=True)  # Στήλη 1
+    column2 = models.CharField(max_length=255, blank=True, null=True)  # Στήλη 2
+
+    def __str__(self):
+        return self.title
