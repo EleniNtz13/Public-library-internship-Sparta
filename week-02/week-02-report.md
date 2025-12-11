@@ -100,6 +100,7 @@ config.inc.php
 ```
 $cfg['blowfish_secret'] = 'your32charactersecretkeyhere';
 ```
+and save.
 
 #### Register phpMyAdmin in Apache
 
