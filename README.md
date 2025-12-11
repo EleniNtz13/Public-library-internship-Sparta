@@ -75,12 +75,16 @@ Together, these tools form the foundation of a system capable of handling book r
 - ✔️ Assisted in library cataloging through Excel
 - ✔️ Worked with RFID book identification technology
 
+---
+
 ### 🧠 Tools Used
 
 - ChatGPT – assistance with code and documentation
 - GitHub Copilot – development support
 
-📌 Additional Work
+---
+
+### 📌 Additional Work
 
 Alongside the technical setup, I worked extensively with Excel to record books that were not yet cataloged so they could later be added to the database.
 I also gained experience with the RFID tracking system, which allows quick identification of books using the unique ID stored on each tag.
