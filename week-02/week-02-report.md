@@ -351,6 +351,9 @@ python manage.py makemigrations
 python manage.py migrate
 
 
+
+
+++ να δω το αρχείο ολγ
 ---
 
 *ν ελέγχω ταβηματα αν ειανι σωστά*
