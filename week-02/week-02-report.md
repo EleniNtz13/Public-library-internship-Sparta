@@ -28,7 +28,7 @@ Save the file when finished.
 3. Find **Apache24**
 4. Right-click → **Restart**
 
-#### 2️⃣ Create an info.php Test File
+#### Create an info.php Test File
 
 Navigate to:
 
@@ -63,7 +63,7 @@ http://localhost/info.php
 
 If everything is correct, you will see the **PHP Information Page**.
 
-### 3️⃣ phpMyAdmin Installation
+### 2️⃣ phpMyAdmin Installation
 #### 📥 Download phpMyAdmin
 
 - Go to the official site
@@ -97,7 +97,7 @@ config.inc.php
 $cfg['blowfish_secret'] = 'your32charactersecretkeyhere';
 ```
 
-### 4️⃣ Register phpMyAdmin in Apache
+#### Register phpMyAdmin in Apache
 
 Open:
 ```
@@ -115,7 +115,7 @@ Alias /phpmyadmin "C:/Apache24/htdocs/phpmyadmin"
 
 💾 Save the file.
 
-### 5️⃣ Restart Apache
+#### Restart Apache
 
 Open **Command Prompt as Administrator**:
 ```
@@ -123,7 +123,7 @@ cd C:\Apache24\bin
 httpd -k restart
 ```
 
-### 6️⃣ Access phpMyAdmin
+#### Access phpMyAdmin
 
 Open:
 ```
@@ -133,21 +133,18 @@ http://localhost/phpmyadmin
 If configured correctly, the **login page** will appear.
 Enter your **MySQL username and password**.
 
-### 🗄️ 7️⃣ Create a Database in phpMyAdmin
+#### 🗄️3️⃣ Create a Database in phpMyAdmin
 ➕ Create New Database
 
 1. Left sidebar → **New**
-
 2. Enter a name
-
 3. Choose collation:
 ```
 utf8mb4_general_ci
 ```
-
 4. Click **Create**
 
-### 📤 8️⃣ Import Data (CSV)
+### 📤 Import Data (CSV)
 
 If you have Excel data:
 
@@ -172,7 +169,7 @@ Then import again.
 
 
 
-
+4️⃣ 3️⃣5️⃣ 6️⃣7️⃣8️⃣
 
 ---
 
