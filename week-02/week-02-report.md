@@ -66,7 +66,10 @@ If everything is correct, you will see the **PHP Information Page**.
 ### 2️⃣ phpMyAdmin Installation
 #### 📥 Download phpMyAdmin
 
-- Go to the official site
+- Go to the official site:
+```
+https://www.phpmyadmin.net/downloads/
+```
 
 - Download the **All Languages ZIP** version
 
