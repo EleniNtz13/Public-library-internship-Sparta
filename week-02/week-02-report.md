@@ -420,3 +420,47 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title if self.title else "Book"
+
+
+
+
+
+
+
+
+
+
+from django.core.management.base import BaseCommand
+import pandas as pd
+from main.models import Book
+
+class Command(BaseCommand):
+    help = "Import books data from Excel into PostgreSQL"
+
+    def handle(self, *args, **options):
+        df = pd.read_excel('main/excel_data/data.xlsx')
+
+        books = []
+        for _, row in df.iterrows():
+            book = Book(
+                entry_number=row.get('entry_number'),
+                entry_date=row.get('entry_date'),
+                author=row.get('author'),
+                koha_author=row.get('koha_author'),
+                title=row.get('title'),
+                publisher=row.get('publisher'),
+                edition=row.get('edition'),
+                publish_year=row.get('publish_year'),
+                publish_place=row.get('publish_place'),
+                shape=row.get('shape'),
+                pages=row.get('pages'),
+                volume=row.get('volume'),
+                notes=row.get('notes'),
+                isbn=row.get('isbn'),
+                column1=row.get('column1'),
+                column2=row.get('column2')
+            )
+            books.append(book)
+
+        Book.objects.bulk_create(books)
+        self.stdout.write(self.style.SUCCESS("✔ Successfully imported all books!"))
