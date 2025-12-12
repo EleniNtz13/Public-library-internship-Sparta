@@ -121,8 +121,8 @@ Open ```httpd.conf``` and add this line at the very end:
 ```
 DirectoryIndex index.php index.html
 ```
-This ensures Apache loads index.php first when a folder is accessed.
-💾 Save the file
+This ensures Apache loads ```index.php``` first when a folder is accessed.
+💾 Save the file.
 
 #### ⚙️ Configure PHP Extensions
 Navigate to the PHP installation folder:
@@ -134,7 +134,7 @@ C:\php
 ```
 php.ini
 ```
-3. Open php.ini
+3. Open ```php.ini```
 4. Press **Ctrl + F** and search for the following extensions:
 - extension=mysqli
 - extension=pdo_mysql
@@ -143,7 +143,7 @@ php.ini
 extension=mysqli
 extension=pdo_mysql
 ```
-💾 Save the php.ini file.
+💾 Save the ```php.ini``` file.
 
 #### Restart Apache
 
@@ -196,12 +196,12 @@ When importing your .csv file into phpMyAdmin:
 
 
 
-4️⃣ 5️⃣ 6️⃣7️⃣8️⃣
+ 5️⃣ 6️⃣7️⃣8️⃣
 
 ---
 
-### 🚀 Next Step: Installing & Setting Up Django
-#### Verify Python Installation
+### 4️⃣ Next Step: Installing & Setting Up Django
+#### 🚀 Verify Python Installation
 
 Open **CMD** and run:
 ```
@@ -227,66 +227,68 @@ venv\Scripts\activate
 
 #### Install Django
 
-- Navigate to your working directory:
+Navigate to your working directory:
 ```
 cd C:\Users\...
 ```
 
-- Then install Django:
+Then install Django:
 ```
 pip install django
 ```
 
-- If installation completes successfully, continue to the next step. ✅
+✅ If installation completes successfully, continue to the next step. 
 
-4️⃣ Create a New Django Project
+#### Create a New Django Project
 
 Run:
-
+```
 django-admin startproject myproject
+```
 
-
-A new folder named myproject will be created in your current path.
+A new folder named ```myproject``` will be created in your current path.
 
 Move into the project directory:
-
+```
 cd myproject
+```
 
-5️⃣ Run the Development Server
+#### ✨ Run the Development Server
 
 Start the Django server:
-
+```
 python manage.py runserver
-
+```
 
 You will receive a local URL such as:
-
+```
 http://127.0.0.1:8000/
+```
 
-
-Open it in your browser — you should see the default Django page with the rocket 🚀
+Open it in your browser — you should see the **default Django page with the rocket** 🚀
 
 Stop the server anytime with:
-
+```
 Ctrl + C
+```
 
-6️⃣ Create a Django App
+#### Create a Django App
 
 Inside the project directory, run:
-
+```
 python manage.py startapp my_app
+```
 
+This will generate a new folder named **my_app** inside **myproject**.
 
-This will generate a new folder named my_app inside myproject.
-
-7️⃣ Open the Project in VS Code
+#### 💻 Open the Project in VS Code
 
 Run:
-
+```
 code .
+```
 
-
-This will open both myproject and my_app in Visual Studio Code for development. 💻✨
+This will open both **myproject** and **my_app** in Visual Studio Code for development. 
 
 
 
