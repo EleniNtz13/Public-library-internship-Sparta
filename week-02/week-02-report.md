@@ -108,7 +108,7 @@ http://localhost/phpmyadmin
 If configured correctly, the **login page** will appear.
 Enter your **MySQL username and password**.
 
-### 🗄️ Create a Database in phpMyAdmin
+#### 🗄️ Create a Database in phpMyAdmin
 ➕ Create New Database
 
 1. Left sidebar → **New**
