@@ -464,3 +464,16 @@ class Command(BaseCommand):
 
         Book.objects.bulk_create(books)
         self.stdout.write(self.style.SUCCESS("✔ Successfully imported all books!"))
+
+
+
+
+
+
+from django.shortcuts import render
+from .models import Book
+
+def book_list(request):
+    books = Book.objects.all().order_by('entry_number')
+    return render(request, 'book_list.html', {'books': books})
+
