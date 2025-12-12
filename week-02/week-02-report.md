@@ -507,3 +507,53 @@ urlpatterns = [
     path('', include('main.urls')),   # root -> main
     path('admin/', admin.site.urls),
 ]
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Database</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 6px;
+        }
+        th {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Books in Library</h2>
+
+<table>
+    <tr>
+        <th>Entry #</th>
+        <th>Author</th>
+        <th>Title</th>
+        <th>Publisher</th>
+        <th>Year</th>
+        <th>ISBN</th>
+    </tr>
+
+    {% for book in books %}
+    <tr>
+        <td>{{ book.entry_number }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.publisher }}</td>
+        <td>{{ book.publish_year }}</td>
+        <td>{{ book.isbn }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
