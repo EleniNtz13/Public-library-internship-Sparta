@@ -387,91 +387,10 @@ This will create the Book table inside the PostgreSQL database according to your
 
 
 
- 
-
-## συνδεση Django με postresql 
-
-στο ιδιο cmd εκει που υπάρχει το manage.py γραψε: 
-pip install psycopg2-binary
-
-an einai ok sinexizoyme
-
-δίνεις τα στοιχεια της βασης:
-database name: library_db
-user: postgres
-password: ότι εβαλες ξατα την εγκατάσταση της postresql 
-Host: localhost 
-Port: 5432
-
-άνοιξε το αρχειο settings.py
-
-στο σημειο DATABASES={7 γραμμές}
-αντικτεστησε απο το σημειο με το ονομα 
-'NAME': 'library_db',
-και προσθεσε τα υπολοιπα στοιχεια που ριναι παραπάνω οπως ακριβως και αυτο 
-
-
-στο ιδιο cmd τρέξε 
-python manage.py migrate 
-για να δημιουργηθουν τα tables στην βάση 
-
-
-στο cmd 
-python manage.py startapp library 
-για να γινει νεος φακελος με ονομα library στο αντίστοιχο path 
-
-
-
-στα settings βρες το INSTALLED_APPS. και προσθεσε τη γραμμή 
-**'library_db',      
-???**
-
-
-στο τέλος και save 
-
-
-στον φακελο library που δημιουργήθηκε βρες το models.py και ανοιξε το στο vs code και αντικατεστησε το με τον κωδικα:
-
-
-from django.db import models
-
-class Book(models.Model):
-    entry_number = models.IntegerField()  # Αριθμός εισαγωγής
-    entry_date = models.DateField()       # Ημερομηνία εισαγωγής
-    author = models.CharField(max_length=255)  # Συγγραφέας
-    koha_author = models.CharField(max_length=255, blank=True, null=True)  # Συγγραφέας Koha
-    title = models.CharField(max_length=255)   # Τίτλος
-    publisher = models.CharField(max_length=255, blank=True, null=True)  # Εκδότης
-    edition = models.CharField(max_length=255, blank=True, null=True)    # Έκδοση
-    publish_year = models.IntegerField(blank=True, null=True)  # Έτος έκδοσης
-    publish_place = models.CharField(max_length=255, blank=True, null=True)  # Τόπος έκδοσης
-    shape = models.CharField(max_length=255, blank=True, null=True)  # Σχήμα
-    pages = models.CharField(max_length=50, blank=True, null=True)  # Σελίδες
-    volume = models.CharField(max_length=50, blank=True, null=True) # Τόμος
-    notes = models.TextField(blank=True, null=True)                 # Παρατηρήσεις
-    isbn = models.CharField(max_length=50, blank=True, null=True)   # ISBN
-    column1 = models.CharField(max_length=255, blank=True, null=True)  # Στήλη 1
-    column2 = models.CharField(max_length=255, blank=True, null=True)  # Στήλη 2
-
-    def __str__(self):
-       return self.title
-
-
-και save
-
-στο cmd
-python manage.py makemigrations 
-python manage.py migrate
-
-
-
-*++να δω το αρχείο ολγ*
-
 ---
 
-*ν ελέγχω ταβηματα αν ειανι σωστά*
 *να φτιαξω μια πρριληψη που θα συνδεει ολο το report auto*
-
+*να τα δώσω στο τέλος στο τσατ για emojis και περιληψη γενικη για αυτη την εβδομαδα*
 
 
 from django.core.management.base import BaseCommand
@@ -496,12 +415,6 @@ class Command(BaseCommand):
         Person.objects.bulk_create(objects)
 
         self.stdout.write(self.style.SUCCESS("✔ Excel import completed!"))
-
-
-
-
-
-
 
 
 
@@ -670,8 +583,3 @@ urlpatterns = [
 
 </body>
 </html>
-
-
-
-
-να τα δώσω στο τέλος στο τσατ για emojis και περιληψη γενικη για αυτη την εβδομαδα
