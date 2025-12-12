@@ -139,7 +139,7 @@ When importing your .csv file into phpMyAdmin:
 - If the data does not appear correctly aligned after import, change the **Field Separator** from ```,``` to ```;```.
 - Ensure the file is saved in **UTF-8** encoding to avoid incorrect characters.
 
----️⃣
+---️
 
 ### 2️⃣ Installing & Setting Up Django
 #### 🚀 Verify Python Installation
