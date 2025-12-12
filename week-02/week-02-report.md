@@ -3,23 +3,23 @@
 
 #### 🔧 Update Apache Configuration (```httpd.conf```)
 
-Navigate to:
+- Navigate to:
 
 ```
 C:\Apache24\conf
 ```
 
 
-Open the file ```httpd.conf``` and locate the line you previously added for ```AddType```.
+- Open the file ```httpd.conf``` and locate the line you previously added for ```AddType```.
 
-Instead of that line, type:
+- Instead of that line, type:
 
 ```
 AddHandler application/x-httpd-php .php
 ```
 
 
-Save the file when finished.
+- Save the file when finished.
 
 #### 🔄 (Optional) Restart Apache via Windows Services
 
@@ -30,14 +30,14 @@ Save the file when finished.
 
 #### Create an info.php Test File
 
-Navigate to:
+- Navigate to:
 
 ```
 C:\Apache24\htdocs
 ```
 
 
-Create a new file named ```info.php``` using Notepad.
+- Create a new file named ```info.php``` using Notepad.
 
 Insert:
 ```
