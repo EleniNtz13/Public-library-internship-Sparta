@@ -326,25 +326,6 @@ If Apache is running successfully, you should see the message:
 
 **It works!** ✅
 
-### ✔ Important Note
-
-Make sure that ```php``` and ```Apache24``` are both located on the ```C:\ drive```, since the configuration paths depend on this structure:
-
-```
-C:\php
-C:\Apache24
-```
-
-
-**Note**: All servers run on localhost and are only accessible from your local machine. They are not exposed to the internet.
-
-
-| Server   | Technology | Port |
-| -------- | ---------- | ---- |
-| 🐍 Flask | Python     | 5000 |
-| 🐘 PHP   | Built-in   | 8080 |
-| ⚡ Apache | PHP        | 80  |
-
 
 ### 6. Configure PHP in Apache
 
@@ -402,3 +383,23 @@ http://localhost/info.php
 ```
 
 - If everything is correct, you will see the **PHP Information Page**.
+
+
+### ✔ Important Note
+
+Make sure that ```php``` and ```Apache24``` are both located on the ```C:\ drive```, since the configuration paths depend on this structure:
+
+```
+C:\php
+C:\Apache24
+```
+
+
+**Note**: All servers run on localhost and are only accessible from your local machine. They are not exposed to the internet.
+
+
+| Server   | Technology | Port |
+| -------- | ---------- | ---- |
+| 🐍 Flask | Python     | 5000 |
+| 🐘 PHP   | Built-in   | 8080 |
+| ⚡ Apache | PHP        | 80  |
