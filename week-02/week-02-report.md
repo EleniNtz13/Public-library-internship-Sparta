@@ -421,15 +421,15 @@ Open:
 library/models.py
 ```
 
-Replace its content with the context in models.py Save the file.
+Replace the Python code (```models.py```) shown in the folder ```week-02``` of this repository and save the file. 
 
-🏗️ 8. Create and Apply Migrations for the New Model
+#### 🏗️ Create and Apply Migrations for the New Model
 
 Run:
-
+```
 python manage.py makemigrations
 python manage.py migrate
-
+```
 
 This will create the Book table inside the PostgreSQL database according to your model.
 
