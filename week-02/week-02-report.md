@@ -302,7 +302,7 @@ This will open both **myproject** and **my_app** in Visual Studio Code for devel
 
 
 
-## επιμενο βημα για την δημιουργία φόρμας
+## επιμενο βημα για την δημιουργία φόρμας 
 
 
 εγκατάσταση postgresql απο το αντιστοιχο site για windows
@@ -614,3 +614,8 @@ urlpatterns = [
 
 </body>
 </html>
+
+
+
+
+να τα δώσω στο τέλος στο τσατ για emojis και περιληψη γενικη για αυτη την εβδομαδα
