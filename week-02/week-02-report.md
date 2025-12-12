@@ -477,3 +477,21 @@ def book_list(request):
     books = Book.objects.all().order_by('entry_number')
     return render(request, 'book_list.html', {'books': books})
 
+
+
+
+
+
+
+
+
+
+
+
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('books/', views.book_list, name='book_list'),
+]
