@@ -1,5 +1,4 @@
-# 🌟 Week 1 – Overview: Development Stack
-
+# 🌟 Week 1 – Overview
 During the first week of the internship, we set up the basic tools to create simple web applications. 
 The goal was to build two small web servers (Python and PHP) and connect them with a MySQL database and Apache HTTP Server to create a complete development environment.
 
