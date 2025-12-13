@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Database</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 6px;
+        }
+        th {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Books in Library</h2>
+
+<table>
+    <tr>
+        <th>entry_number</th>
+        <th>entry_date</th>
+        <th>author</th>
+        <th>koha_author</th>
+        <th>title</th>
+        <th>publisher</th>
+        <th>edition</th>
+        <th>publish_year</th>
+        <th>publish_place</th>
+        <th>shape</th>
+        <th>pages</th>
+        <th>volume</th>
+        <th>notes</th>
+        <th>isbn</th>
+        <th>column1</th>
+        <th>column2</th>
+    </tr>
+
+    {% for book in books %}
+    <tr>
+        <td>{{ book.entry_number }}</td>
+        <td>{{ book.entry_date }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.koha_author }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.publisher }}</td>
+        <td>{{ book.edition }}</td>
+        <td>{{ book.publish_year }}</td>
+        <td>{{ book.publish_place }}</td>
+        <td>{{ book.shape }}</td>
+        <td>{{ book.pages }}</td>
+        <td>{{ book.volume }}</td>
+        <td>{{ book.notes }}</td>
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.column1 }}</td>
+        <td>{{ book.column2 }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
