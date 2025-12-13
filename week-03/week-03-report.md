@@ -14,51 +14,6 @@ The application follows Django’s **MVT (Model–View–Template)** architectur
 
 ---
 
-## 🏗 Project Structure
-
-myproject/
-
-│
-
-├── manage.py
-
-├── myproject/
-
-│ ├── settings.py
-
-│ ├── urls.py
-
-│
-
-├── main/
-
-│ ├── models.py
-
-│ ├── views.py
-
-│ ├── forms.py
-
-│ ├── urls.py
-
-│ ├── templates/
-
-│ ├── excel_data/
-
-│ │ └── data.xlsx
-
-│ └── management/
-
-│ └── commands/
-
-│ └── import_books.py
-
-
-
-
-Each file has a clearly defined responsibility, following Django best practices.
-
----
-
 ## 🔧 Step-by-Step Implementation Guide
 
 ### 1️⃣ Environment Preparation ⚙️
