@@ -1,6 +1,4 @@
-# 🌟 Week 3 – Overview:
-
-# 📚 Library Management System  
+# 🌟 Week 3 – Overview: Library Management System  
 ### Django · PostgreSQL · Excel Import
 
 This project is a Django-based web application developed during an internship, aiming to manage a library database.  
