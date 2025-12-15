@@ -92,11 +92,7 @@ Open that URL in your browser, and the page will display the messages:
 ## 2️⃣ PHP Setup
 ### 1. Download and Install PHP
 
-Go to the official PHP for Windows download page:
-
-```
-https://windows.php.net/download/
-```
+Go to the official PHP for Windows download page: https://windows.php.net/download/
 
 Download the **Thread Safe ZIP package** and extract it into:
 
@@ -167,11 +163,7 @@ The following sections describe the installation steps for **MySQL** and **Apach
 ## Installation Steps (Windows)
 ### 1. Download MySQL Installer
 
-- Visit the official MySQL download page:
-
-```
-https://dev.mysql.com/downloads/installer/
-```
+- Visit the official MySQL download page: https://dev.mysql.com/downloads/installer/
 
 
 - Download the **latest MySQL Installer** for Windows.
@@ -214,11 +206,7 @@ When the process finishes, MySQL Workbench will be available for use.
 ## Installation Steps:
 ### 1. Download Apache
 
-- Visit the Apache Lounge download page:
-
-```
-https://www.apachelounge.com/download/
-```
+- Visit the Apache Lounge download page: https://www.apachelounge.com/download/
 
 
 - Download the version compatible with your system.
