@@ -319,7 +319,7 @@ Open the file:
 your_project/settings.py
 ```
 
-A) Find the ```DATABASES``` section and replace it with:
+Find the ```DATABASES``` section and replace it with:
 ```
 DATABASES = {
     'default': {
@@ -332,8 +332,6 @@ DATABASES = {
     }
 }
 ```
-
-B) 
 
 Save the file.
 
