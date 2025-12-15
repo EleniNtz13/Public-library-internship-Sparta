@@ -386,7 +386,7 @@ http://localhost/info.php
 
 ### ✔ Important Note
 
-Make sure that ```php``` and ```Apache24``` are both located on the ```C:\ drive```, since the configuration paths depend on this structure:
+Make sure that ```php``` and ```Apache24``` are both located on the ```C:\drive```, since the configuration paths depend on this structure:
 
 ```
 C:\php
