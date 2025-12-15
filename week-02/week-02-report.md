@@ -306,7 +306,7 @@ If the installation completes successfully, continue to the next step.
 
 Use the following settings (adjust values as needed):
 
-- **Database name**: ```library_db```
+- **Database name**: ```db```
 - **User**: ```postgres```
 - **Password**: *(the password you set during PostgreSQL installation)*
 - **Host**: ```localhost```
@@ -324,7 +324,7 @@ Find the ```DATABASES``` section and replace it with:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'library_db',
+        'NAME': 'db',
         'USER': 'postgres',
         'PASSWORD': 'your_database_password',
         'HOST': 'localhost',
