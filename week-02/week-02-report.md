@@ -350,10 +350,10 @@ If everything is correct, Django will create the necessary tables in PostgreSQL.
 
 Run:
 ```
-python manage.py startapp library
+python manage.py startapp excel_data
 ```
 
-A new folder named **library** will be created inside your project.
+A new folder named **excel_data** will be created inside your project.
 
 #### 6. 🧩 Register the App in Django
 
