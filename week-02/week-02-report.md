@@ -170,7 +170,7 @@ Activate it:
 venv\Scripts\activate
 ```
 
-⚠️ The virtual environment must be active before installing Django.
+⚠️ The **v**irtual **env**ironment must be active before installing Django.
 
 #### 3. 📌 Install Django
 
