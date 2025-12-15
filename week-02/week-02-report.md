@@ -5,7 +5,7 @@ These steps provide the foundation for managing library data and building dynami
 ## ⚙️ phpMyAdmin Setup
 
 ### 1️⃣ phpMyAdmin Installation
-#### 📥 Download phpMyAdmin
+#### 1. 📥 Download phpMyAdmin
 
 Go to the official site:
 ```
@@ -14,7 +14,7 @@ https://www.phpmyadmin.net/downloads/
 
 Download the **All Languages ZIP** version
 
-#### 📁 Extract Files
+#### 2. 📁 Extract Files
 
 Create a folder inside ```htdocs``` named:
 
@@ -26,7 +26,7 @@ Extract **all ZIP contents** *directly inside it*
 
 ⚠️ Make sure no double folder is created (e.g. phpmyadmin/phpmyadmin).
 
-#### ⚙️ Configure phpMyAdmin
+#### 3. ⚙️ Configure phpMyAdmin
 
 Inside the ```phpmyadmin``` folder:
 
@@ -42,7 +42,7 @@ $cfg['blowfish_secret'] = 'your32charactersecretkeyhere';
 ```
 and save.
 
-#### ⚙️ Register phpMyAdmin in Apache
+#### 4. ⚙️ Register phpMyAdmin in Apache
 
 Open:
 ```
@@ -60,7 +60,7 @@ Alias /phpmyadmin "C:/Apache24/htdocs/phpmyadmin"
 
 💾 Save the file.
 
-#### ⚙️ Set Default Directory Index
+#### 5. ⚙️ Set Default Directory Index
 Still inside:
 ```
 C:\Apache24\conf
@@ -73,7 +73,7 @@ This ensures Apache loads ```index.php``` first when a folder is accessed.
 
 💾 Save the file.
 
-#### ⚙️ Configure PHP Extensions
+#### 6. ⚙️ Configure PHP Extensions
 Navigate to the PHP installation folder:
 ```
 C:\php
@@ -94,7 +94,7 @@ extension=pdo_mysql
 ```
 💾 Save the ```php.ini``` file.
 
-#### Restart Apache
+#### 7. Restart Apache
 
 Open **Command Prompt as Administrator**:
 ```
@@ -102,7 +102,7 @@ cd C:\Apache24\bin
 httpd -k restart
 ```
 
-#### Access phpMyAdmin
+#### 8. Access phpMyAdmin
 
 Open:
 ```
