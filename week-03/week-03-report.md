@@ -111,8 +111,6 @@ Purpose:
 ⚠️ **Warning**  
 Commands must be executed from the directory containing `manage.py`.
 
-### 5. 🔄 Database Migration 
-
 ---
 
 ### 6. 📊 Excel Data Placement 
@@ -121,7 +119,7 @@ The Excel file containing book records is placed inside a dedicated folder withi
 This keeps data files separated from source code and ensures predictable paths.
 
 📁 Location:
-main/excel_data/data.xlsx
+`main/excel_data/data.xlsx`
 
 The column headers of the Excel file **must exactly match** the model field names.
 
