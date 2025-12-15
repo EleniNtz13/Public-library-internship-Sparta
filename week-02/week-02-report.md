@@ -364,7 +364,7 @@ INSTALLED_APPS = [
 
 Add your new app:
 ```
-excel_data,
+excel_data
 ```
 
 Save the file.
@@ -373,7 +373,7 @@ Save the file.
 
 Open:
 ```
-library/models.py
+excel_data/models.py
 ```
 
 Replace the Python code (```models.py```) shown in the folder ```week-02``` of this repository and save the file. 
