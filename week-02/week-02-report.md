@@ -70,6 +70,7 @@ Open ```httpd.conf``` and add this line at the very end:
 DirectoryIndex index.php index.html
 ```
 This ensures Apache loads ```index.php``` first when a folder is accessed.
+
 💾 Save the file.
 
 #### ⚙️ Configure PHP Extensions
