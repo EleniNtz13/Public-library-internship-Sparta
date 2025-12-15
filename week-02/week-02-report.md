@@ -378,6 +378,8 @@ excel_data/models.py
 
 Replace the Python code (```models.py```) shown in the folder ```week-02``` of this repository and save the file. 
 
+⚠️ This specific code refers to the library manuals, covering the needs of the Sparta public library.
+
 #### 8. 🏗️ Create and Apply Migrations for the New Model
 
 Run:
