@@ -246,7 +246,7 @@ This will open **myproject** folder in Visual Studio Code for development.
 
 ### 1. 🛠️ Install PostgreSQL (Windows)
 
-1. Download PostgreSQL for Windows from the official website:
+1. Download **PostgreSQL** for Windows from the official website:
    ```
    https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
    ```
