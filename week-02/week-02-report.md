@@ -112,7 +112,7 @@ http://localhost/phpmyadmin
 If configured correctly, the **login page** will appear.
 Enter your **MySQL username and password**.
 
-#### 🗄️ Create a Database in phpMyAdmin
+#### 1. 🗄️ Create a Database in phpMyAdmin
 ➕ Create New Database
 
 1. Left sidebar → **New**
@@ -123,7 +123,7 @@ utf8mb4_general_ci
 ```
 4. Click **Create**
 
-#### 📤 Import Data (CSV)
+#### 2. 📤 Import Data (CSV)
 
 If you have Excel data:
 
@@ -146,7 +146,7 @@ When importing your .csv file into phpMyAdmin:
 ---️
 
 ### 2️⃣ Installing & Setting Up Django
-#### 🚀 Verify Python Installation
+#### 1. 🚀 Verify Python Installation
 
 Open **CMD** and run:
 ```
@@ -156,7 +156,7 @@ python --version
 - If Python is **not installed**, download and install it from the official website.
 - If the command prints a version number, you're good to go. ✔️
 
-#### Create a Virtual Environment (Recommended)
+#### 2. Create a Virtual Environment (Recommended)
 
 In **CMD (Run as Administrator)**, navigate to your desired directory and run:
 ```
@@ -170,7 +170,7 @@ venv\Scripts\activate
 
 ⚠️ The virtual environment must be active before installing Django.
 
-#### 📌 Install Django
+#### 3. 📌 Install Django
 
 Navigate to your working directory:
 ```
@@ -184,7 +184,7 @@ pip install django
 
 ✅ If installation completes successfully, continue to the next step. 
 
-#### 🗂️ Create a New Django Project
+#### 4. 🗂️ Create a New Django Project
 
 Run:
 ```
@@ -198,7 +198,7 @@ Move into the project directory:
 cd myproject
 ```
 
-#### ✨ Run the Development Server
+#### 5. ✨ Run the Development Server
 
 Start the Django server:
 ```
@@ -217,7 +217,7 @@ Stop the server anytime with:
 Ctrl + C
 ```
 
-#### 📌 Create a Django App
+#### 6. 📌 Create a Django App
 
 Inside the project directory, run:
 ```
@@ -226,7 +226,7 @@ python manage.py startapp my_app
 
 This will generate a new folder named **my_app** inside **myproject**.
 
-#### 💻 Open the Project in VS Code
+#### 7. 💻 Open the Project in VS Code
 
 Run:
 ```
@@ -239,7 +239,7 @@ This will open both **myproject** and **my_app** in Visual Studio Code for devel
 
 ### 3️⃣ Install & Configure PostgreSQL & pgAdmin4
 
-#### 🛠️ Install PostgreSQL (Windows)
+#### 1. 🛠️ Install PostgreSQL (Windows)
 
 1. Download PostgreSQL for Windows from the official website.
 2. Run the installer → click **Yes** to all prompts.
@@ -269,7 +269,7 @@ You can optionally check that the PostgreSQL service is running:
 
 If it is stopped, right-click → **Start**.
 
-#### 🖥️ Open pgAdmin4
+#### 2. 🖥️ Open pgAdmin4
 
 Go to **Start** → **pgAdmin 4**.
 
@@ -279,7 +279,7 @@ In the left panel, expand **Servers** → **PostgreSQL 18**.
 
 Enter the password you set earlier.
 
-#### 🧱 Create a New Database
+#### 3. 🧱 Create a New Database
 
 In the left sidebar, right-click **Databases**.
 
@@ -291,7 +291,7 @@ Click **Save**.
 
 
 ### 4️⃣🐘 Connecting Django with PostgreSQL
-#### 🔌 Install PostgreSQL Driver
+#### 1. 🔌 Install PostgreSQL Driver
 
 Open the terminal **inside the folder where** ```manage.py``` **exists** and run:
 ```
@@ -299,7 +299,7 @@ pip install psycopg2-binary
 ```
 If the installation completes successfully, continue to the next step.
 
-#### 🗄️ Database Credentials
+#### 2. 🗄️ Database Credentials
 
 Use the following settings (adjust values as needed):
 
@@ -309,7 +309,7 @@ Use the following settings (adjust values as needed):
 - **Host**: ```localhost```
 - **Port**: ```5432```
 
-**⚙️ Edit Django Settings** (```settings.py```)
+**3. ⚙️ Edit Django Settings** (```settings.py```)
 
 Open the file:
 ```
@@ -332,7 +332,7 @@ DATABASES = {
 
 Save the file.
 
-#### 🔄 Apply Initial Migrations
+#### 4. 🔄 Apply Initial Migrations
 
 In the same terminal:
 ```
@@ -341,7 +341,7 @@ python manage.py migrate
 
 If everything is correct, Django will create the necessary tables in PostgreSQL.
 
-📁 Create a New Django App
+#### 5. 📁 Create a New Django App
 
 Run:
 ```
@@ -350,7 +350,7 @@ python manage.py startapp library
 
 A new folder named **library** will be created inside your project.
 
-#### 🧩 Register the App in Django
+#### 6. 🧩 Register the App in Django
 
 Open ```settings.py``` again and find:
 ```
@@ -364,7 +364,7 @@ Add your new app:
 
 Save the file.
 
-#### 📚 Define the Book Model
+#### 7. 📚 Define the Book Model
 
 Open:
 ```
@@ -373,7 +373,7 @@ library/models.py
 
 Replace the Python code (```models.py```) shown in the folder ```week-02``` of this repository and save the file. 
 
-#### 🏗️ Create and Apply Migrations for the New Model
+#### 8. 🏗️ Create and Apply Migrations for the New Model
 
 Run:
 ```
@@ -382,7 +382,5 @@ python manage.py migrate
 ```
 
 This will create the Book table inside the PostgreSQL database according to your model.
-
-
 
 
