@@ -7,10 +7,8 @@ These steps provide the foundation for managing library data and building dynami
 ### 1️⃣ phpMyAdmin Installation
 ### 1. 📥 Download phpMyAdmin
 
-Go to the official site:
-```
-https://www.phpmyadmin.net/downloads/
-```
+Go to the official site: https://www.phpmyadmin.net/downloads/
+
 
 Download the **All Languages ZIP** version
 
