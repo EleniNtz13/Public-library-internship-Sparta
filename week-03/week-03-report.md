@@ -1,34 +1,133 @@
-# 🌟 Week 3 – Overview: Library Management System  
+# 🌟 Week 3 – Library Management System
 
-This project is a Django-based web application developed during an internship, aiming to manage a library database.  
-It supports importing book records from Excel files, storing them in a PostgreSQL database, and displaying/managing them through a web interface.
-
-## 🧭 Project Overview
-
-The application follows Django’s **MVT (Model–View–Template)** architecture and consists of:
-
-- A PostgreSQL database for persistent storage
-- A Django backend for data handling
-- A web interface for viewing and adding books
-- A custom Django management command for importing Excel data
+This week focuses on completing the **full integration between forms, views, and the PostgreSQL database**.  
+The system now supports **data persistence**, **Excel imports**, and **web-based data management**.
 
 ---
-na φτιαξω τους αριθμους και στα βηματα και στους τιτλους
+
+## 🧭 Overview
+
+During Week 3, the application transitions from setup to a **fully functional backend system** by:
+
+- Defining database models
+- Importing Excel data into PostgreSQL
+- Connecting forms to models
+- Displaying stored data via Django views and templates
+
+The project follows Django’s **MVT (Model–View–Template)** architecture.
+
+---
 
 ## 1️⃣🔧 Step-by-Step Implementation Guide
 
-### 1. ⚙️ Environment Preparation 
+### 1. Environment Preparation ⚙️
 
-Before starting development, a Python virtual environment is created and activated.  
-All required dependencies (Django, PostgreSQL driver, Pandas, OpenPyXL) are installed inside this environment.
-```
-pip install pandas
-```
-```
-pip install openpyxl
-```
+All required Python libraries are installed inside the virtual environment.
 
-📁 *Refer to*: `requirements.txt` (if provided) or virtual environment setup instructions.
+Used libraries(```pip install...```):
+- Django 
+- psycopg2-binary
+- Pandas
+- OpenPyXL
+
+📁 Code reference:
+- `requirements.txt` (optional)
+
+⚠️ **Warning**  
+The virtual environment must be activated before installing or running any Django command.
+
+
+### 2️⃣ Django Project & App Registration 🏗
+
+The Django project and the main application are verified and registered.
+
+Purpose:
+- Enable Django to detect models, templates, and management commands
+
+📁 Code reference:
+- `myproject/settings.py` → `INSTALLED_APPS`
+- App folder: `main/`
+
+⚠️ **Warning**  
+If the app is missing from `INSTALLED_APPS`, models and forms will not work.
+
+---
+
+### 3️⃣ PostgreSQL Database Configuration 🐘
+
+Django is configured to use PostgreSQL instead of SQLite.
+
+Purpose:
+- Production-level database support
+- Compatibility with bulk data import
+
+📁 Code reference:
+- `myproject/settings.py` → `DATABASES`
+
+⚠️ **Warning**  
+The database name, user, and password must match exactly the PostgreSQL configuration in pgAdmin.
+
+---
+
+### 4️⃣ Book Model Definition 📦
+
+The `Book` model defines the structure of library records.
+
+Purpose:
+- Map database fields to real library data
+- Match Excel column names
+
+📁 Code reference:
+- `main/models.py`
+
+⚠️ **Warning**  
+Any modification to the model requires new migrations.
+
+---
+
+### 5️⃣ Database Migrations 🔄
+
+Migrations synchronize Django models with PostgreSQL tables.
+
+Purpose:
+- Create database tables
+- Ensure schema consistency
+
+📁 Code reference:
+- `manage.py`
+
+⚠️ **Warning**  
+Commands must be executed from the directory containing `manage.py`.
+
+---
+
+### 6️⃣ Excel File Placement 📊
+
+The Excel file containing the library data is placed in a dedicated directory.
+
+📁 File location:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
 
 ---
 
