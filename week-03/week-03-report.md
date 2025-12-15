@@ -21,7 +21,12 @@ na φτιαξω τους αριθμους και στα βηματα και στ
 
 Before starting development, a Python virtual environment is created and activated.  
 All required dependencies (Django, PostgreSQL driver, Pandas, OpenPyXL) are installed inside this environment.
-
+```
+pip install pandas
+```
+```
+pip install openpyxl
+```
 📁 *Refer to*: `requirements.txt` (if provided) or virtual environment setup instructions.
 
 ---
