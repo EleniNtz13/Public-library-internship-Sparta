@@ -112,8 +112,8 @@ http://localhost/phpmyadmin
 If configured correctly, the **login page** will appear.
 Enter your **MySQL username and password**.
 
-### 1. 🗄️ Create a Database in phpMyAdmin
-➕ Create New Database
+### 2️⃣ 🗄️ Create a Database in phpMyAdmin
+### 1. Create New Database
 
 1. Left sidebar → **New**
 2. Enter a name
@@ -147,7 +147,7 @@ When importing your .csv file into phpMyAdmin:
 ---
 
 
-### 2️⃣ Installing & Setting Up Django
+### 3️⃣ Installing & Setting Up Django
 ### 1. 🚀 Verify Python Installation
 
 Open **CMD** and run:
@@ -239,7 +239,7 @@ This will open both **myproject** and **my_app** in Visual Studio Code for devel
 
 
 
-### 3️⃣ Install & Configure PostgreSQL & pgAdmin4
+### 4️⃣ Install & Configure PostgreSQL & pgAdmin4
 
 ### 1. 🛠️ Install PostgreSQL (Windows)
 
@@ -292,7 +292,7 @@ Enter a **name** for your database.
 Click **Save**.
 
 
-### 4️⃣🐘 Connecting Django with PostgreSQL
+### 5️⃣🐘 Connecting Django with PostgreSQL
 ### 1. 🔌 Install PostgreSQL Driver
 
 Open the terminal **inside the folder where** ```manage.py``` **exists** and run:
