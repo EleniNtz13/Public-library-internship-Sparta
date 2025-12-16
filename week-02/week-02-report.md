@@ -193,10 +193,10 @@ django-admin startproject myproject
 
 A new folder named ```myproject``` will be created in your current path. Automatically, a file named ```myproject``` will be created, which contains the files: 
 
-- ```settings.py```, 
-- ```urls.py```, 
-- ```wsgi.py```, 
-- ```asgi.py```.
+- ```settings.py```
+- ```urls.py```
+- ```wsgi.py```
+- ```asgi.py```
 
 Move into the project directory:
 ```
@@ -358,7 +358,13 @@ Run:
 python manage.py startapp excel_data
 ```
 
-A new folder named **excel_data** will be created inside your project. The folder contains
+A new folder named **excel_data** will be created inside your project. The folder contains:
+
+- ```models.py```
+- ```views.py```
+- ```forms.py```
+- ```urls.py```
+- ```templates/```
 
 #### 6. 🧩 Register the App in Django
 
