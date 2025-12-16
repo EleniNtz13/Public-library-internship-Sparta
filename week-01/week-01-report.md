@@ -340,7 +340,7 @@ Save the file when finished.
 3. Find **Apache24**
 4. Right-click → **Restart**
 
-#### Create an ```info.php``` Test File
+**Create an** ```info.php``` **Test File**
 
 Navigate to:
 
