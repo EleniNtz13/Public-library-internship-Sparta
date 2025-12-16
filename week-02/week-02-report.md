@@ -346,7 +346,7 @@ python manage.py migrate
 
 If everything is correct, Django will create the necessary tables in PostgreSQL.
 
-**5. 📁 Create a New Django App (in** ```myproject``` **)**
+**5. 📁 Create a New Django App (in** ```myproject``` **folder)**
 
 Run:
 ```
