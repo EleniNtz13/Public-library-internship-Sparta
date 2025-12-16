@@ -191,7 +191,7 @@ Run:
 django-admin startproject myproject
 ```
 
-A new folder named ```myproject``` will be created in your current path.
+A new folder named ```myproject``` will be created in your current path. Automatically, a file named ```myproject``` will be created.
 
 Move into the project directory:
 ```
