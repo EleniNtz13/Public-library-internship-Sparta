@@ -58,7 +58,7 @@ for field in Book._meta.fields:
 2. Navigate to:
 
    ```
-   Databases → your_database → Schemas → public → Tables
+   Databases → db → Schemas → public → Tables
    ```
 3. Confirm a table named **`book`** exists
 4. Verify fields such as:
