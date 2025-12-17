@@ -127,7 +127,8 @@ Create:
 
 ```
 excel_data/urls.py
-```This file contains the same code as the file with the same name located in the ```week-03``` folder.
+```
+This file contains the same code as the file with the same name located in the ```week-03``` folder.
 
 ⚠️ Make sure this file is included in the **project-level `urls.py`** using `include()`.
 
