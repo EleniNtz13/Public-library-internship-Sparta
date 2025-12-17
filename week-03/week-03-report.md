@@ -594,6 +594,7 @@ def upload_excel(request):
 
 
 Notes: 
+
 - πρεπει ΤΟ ΑΡΧΕΊΟ που θα φορτωθεί στον browser να είναι .xlsx
 - sto add_book.html sto telos tou kwdika den prepei na iparxei return redirect('show_books') -> einai python
 - na diorthoso to publish year sto models na einai char oxi int! "publish_year = models.CharField(max_length=20, null=True, blank=True)"
