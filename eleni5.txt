@@ -1,0 +1,384 @@
+models.py
+
+entry_number = models.CharField(
+    max_length=50,
+    null=True,
+    blank=True,
+    unique=True
+)
+
+
+
+upload_excel -> py
+
+
+def upload_excel(request):
+    if request.method == "POST" and request.FILES.get('file'):
+        df = pd.read_excel(request.FILES['file'])
+        df.columns = df.columns.str.strip().str.lower()
+
+        existing_entries = set(
+            Book.objects.values_list('entry_number', flat=True)
+        )
+
+        books = []
+        skipped = []
+
+        for _, row in df.iterrows():
+            entry_number = clean_text(row.get('entry_number'))
+
+            if entry_number in existing_entries:
+                skipped.append(entry_number)
+                continue
+
+            entry_date_value = row.get('entry_date')
+            if pd.notnull(entry_date_value):
+                if hasattr(entry_date_value, 'to_pydatetime'):
+                    entry_date_value = entry_date_value.to_pydatetime().date()
+                elif isinstance(entry_date_value, str):
+                    entry_date_value = parse(entry_date_value).date()
+            else:
+                entry_date_value = None
+
+            books.append(Book(
+                entry_number=entry_number,
+                entry_date=entry_date_value,
+                author=clean_text(row.get('author')),
+                koha_author=clean_text(row.get('koha_author')),
+                title=clean_text(row.get('title')),
+                publisher=clean_text(row.get('publisher')),
+                edition=clean_text(row.get('edition')),
+                publish_year=clean_text(row.get('publish_year')),
+                publish_place=clean_text(row.get('publish_place')),
+                shape=clean_text(row.get('shape')),
+                pages=clean_text(row.get('pages')),
+                volume=clean_text(row.get('volume')),
+                notes=clean_text(row.get('notes')),
+                isbn=clean_text(row.get('isbn')),
+                column1=clean_text(row.get('column1')),
+                column2=clean_text(row.get('column2')),
+            ))
+
+            existing_entries.add(entry_number)
+
+        Book.objects.bulk_create(books)
+
+        return render(
+            request,
+            'main/upload_result.html',
+            {
+                'inserted': len(books),
+                'skipped': skipped,
+            }
+        )
+
+    return render(request, 'main/upload_excel.html')
+
+
+
+
+
+dhmioyrgia upload_result.html
+
+<h2>Αποτέλεσμα εισαγωγής</h2>
+
+<p>Εισήχθησαν: {{ inserted }} βιβλία</p>
+
+{% if skipped %}
+<p style="color:red;">Παραλείφθηκαν λόγω ίδιου entry_number:</p>
+<ul>
+    {% for e in skipped %}
+        <li>{{ e }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+
+
+
+upload_excel.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Excel File</title>
+</head>
+<body>
+    <h2>Upload Excel File</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+upload_result.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Αποτέλεσμα εισαγωγής</title>
+</head>
+<body>
+
+<h2>Αποτέλεσμα εισαγωγής</h2>
+
+<p>Εισήχθησαν: {{ inserted }} βιβλία</p>
+
+{% if skipped %}
+    <p style="color:red;">Παραλείφθηκαν λόγω ίδιου entry_number:</p>
+    <ul>
+        {% for e in skipped %}
+            <li>{{ e }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Δεν υπήρχαν διπλότυπα entry_number.</p>
+{% endif %}
+
+<a href="{% url 'show_books' %}">Επιστροφή στη λίστα βιβλίων</a>
+
+</body>
+</html>
+
+
+
+
+
+
+
+sto settings.py 
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/upload-excel/'
+LOGOUT_REDIRECT_URL = '/login/'
+
+
+
+
+sto views.py
+
+from django.contrib.auth.decorators import login_required
+
+
+
+kai prosthese
+
+@login_required
+def upload_excel(request):
+    ...
+
+KOITA STO TELOS
+
+
+
+
+
+
+urls.py
+
+from django.contrib.auth import views as auth_views
+
+urlpatterns = [
+    path('login/', auth_views.LoginView.as_view(template_name='main/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+]
+
+
+
+
+
+login.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+<h2>Σύνδεση χρήστη</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+
+{% if form.errors %}
+<p style="color:red;">Λάθος username ή password</p>
+{% endif %}
+
+</body>
+</html>
+
+
+
+
+
+
+
+(teliko) urls.py
+
+from django.urls import path 
+from django.contrib.auth import views as auth_views
+from . import views
+
+urlpatterns = [
+    path('', views.show_books, name='show_books'),
+    path('add-book/', views.add_book, name='add_book'),
+    path('login/', auth_views.LoginView.as_view(template_name='main/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='/login/'), name='logout'),
+    path('upload-excel/', views.upload_excel, name='upload_excel'),
+    path('books/', views.show_books, name='show_books'),
+    path('success/', views.success, name='success'),
+]
+
+
+
+
+
+(teliko) upload-excel.html
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Excel File</title>
+</head>
+<body>
+
+    <!-- Εμφάνιση username και κουμπί αποσύνδεσης -->
+    {% if user.is_authenticated %}
+    <p>
+        Logged in as {{ user.username }} |
+        <form method="post" action="{% url 'logout' %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" style="background:none; border:none; color:blue; text-decoration:underline; cursor:pointer; padding:0;">
+                Logout
+            </button>
+        </form>
+    </p>
+    {% endif %}
+
+    <h2>Upload Excel File</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+</body>
+</html>
+
+
+
+(teliko) views.py
+
+import pandas as pd
+import datetime
+from dateutil.parser import parse
+from django.shortcuts import render, redirect
+from .models import Book
+from .forms import BookForm
+from django.contrib.auth.decorators import login_required
+
+def clean_text(value):
+    if pd.isna(value):
+        return None
+    return str(value).strip()
+
+def show_books(request):
+    books = Book.objects.all()
+    return render(request, 'main/book_list.html', {'books': books})
+
+def add_book(request):
+    if request.method == "POST":
+        form = BookForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('show_books')
+    else:
+        form = BookForm()
+    return render(request, 'main/add_book.html', {'form': form})
+@login_required
+def upload_excel(request):
+    # def upload_excel(request):
+    if request.method == "POST" and request.FILES.get('file'):
+        df = pd.read_excel(request.FILES['file'])
+        df.columns = df.columns.str.strip().str.lower()
+
+        existing_entries = set(
+            Book.objects.values_list('entry_number', flat=True)
+        )
+
+        books = []
+        skipped = []
+
+        for _, row in df.iterrows():
+            entry_number = clean_text(row.get('entry_number'))
+
+            if entry_number in existing_entries:
+                skipped.append(entry_number)
+                continue
+
+            entry_date_value = row.get('entry_date')
+            if pd.notnull(entry_date_value):
+                if hasattr(entry_date_value, 'to_pydatetime'):
+                    entry_date_value = entry_date_value.to_pydatetime().date()
+                elif isinstance(entry_date_value, str):
+                    entry_date_value = parse(entry_date_value).date()
+            else:
+                entry_date_value = None
+
+            books.append(Book(
+                entry_number=entry_number,
+                entry_date=entry_date_value,
+                author=clean_text(row.get('author')),
+                koha_author=clean_text(row.get('koha_author')),
+                title=clean_text(row.get('title')),
+                publisher=clean_text(row.get('publisher')),
+                edition=clean_text(row.get('edition')),
+                publish_year=clean_text(row.get('publish_year')),
+                publish_place=clean_text(row.get('publish_place')),
+                shape=clean_text(row.get('shape')),
+                pages=clean_text(row.get('pages')),
+                volume=clean_text(row.get('volume')),
+                notes=clean_text(row.get('notes')),
+                isbn=clean_text(row.get('isbn')),
+                column1=clean_text(row.get('column1')),
+                column2=clean_text(row.get('column2')),
+            ))
+
+            existing_entries.add(entry_number)
+
+        Book.objects.bulk_create(books)
+
+        return render(
+            request,
+            'main/upload_result.html',
+            {
+                'inserted': len(books),
+                'skipped': skipped,
+            }
+        )
+
+    return render(request, 'main/upload_excel.html')
+
+
+
+def success(request):
+    return render(request, 'main/success.html')
+
+
