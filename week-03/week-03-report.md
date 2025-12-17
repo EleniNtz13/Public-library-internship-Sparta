@@ -15,8 +15,6 @@ During Week 3, the application transitions from setup to a **fully functional ba
 - Displaying stored data via Django views and templates
 
 
----
-
 ## ✨ Features
 
 * 📚 Book model integration with PostgreSQL
