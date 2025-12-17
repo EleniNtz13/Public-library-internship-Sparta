@@ -517,10 +517,14 @@ book_list.html
 3)  δημιουργία excel_data/views.py me ton κώδικα που φαινεται στο αντίστοιχο αρχείο του παρόντος φακέλου
 4)  δημιουργία excel_data/urls.py me ton κώδικα που φαινεται στο αντίστοιχο αρχείο του παρόντος φακέλου
 5)  δημιουργία templates/excel_data kai ekei mesa 4 arxeia me onoma add_book.html  me ton κώδικα που φαινεται στο αντίστοιχο αρχείο του παρόντος φακέλου kai success.html  me ton κώδικα που φαινεται στο αντίστοιχο αρχείο του παρόντος φακέλου
-6)  test python manage.py runserver kai meta http://127.0.0.1:8000/books/add
+6)  test python manage.py runserver kai meta http://127.0.0.1:8000/books/add/
 7)  egkatastasi vivliothikis pip install pandas openpyxl
-8)  ενημερωση views.py με προσθήκη του κώδικα upload
-9)  url gia excel upload -> prosthiki sto  excel_data/urls.py to "path('upload/', views.upload_excel, name='upload_excel'),
+8)  ενημερωση views.py με προσθήκη του κώδικα upload, view pou diavazei excel kai gemizei ti forma 
+9)  url gia excel upload -> prosthiki sto  excel_data/urls.py to "path('upload-excel/', views.upload_excel, name='upload_excel'),
+10)  test python manage.py runserver kai meta http://127.0.0.1:8000/upload-excel/
 
-Note: πρεπει ΤΟ ΑΡΧΕΊΟ που θα φορτωθεί στον browser να είναι .xlsx
-sto add_book.html sto telos tou kwdika den prepei na iparxei return redirect('show_books') -> einai python 
+Notes: 
+- πρεπει ΤΟ ΑΡΧΕΊΟ που θα φορτωθεί στον browser να είναι .xlsx
+- sto add_book.html sto telos tou kwdika den prepei na iparxei return redirect('show_books') -> einai python 
+<img width="892" height="620" alt="image" src="https://github.com/user-attachments/assets/59eb6eaa-c39a-44a6-aa72-8c03b2d2c92a" />
+
