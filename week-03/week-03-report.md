@@ -523,3 +523,4 @@ book_list.html
 9)  url gia excel upload -> prosthiki sto  excel_data/urls.py to "path('upload/', views.upload_excel, name='upload_excel'),
 
 Note: πρεπει ΤΟ ΑΡΧΕΊΟ που θα φορτωθεί στον browser να είναι .xlsx
+sto add_book.html sto telos tou kwdika den prepei na iparxei return redirect('show_books') -> einai python 
