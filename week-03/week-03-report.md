@@ -143,16 +143,10 @@ templates/
 ```
 
 ### 📄 add_book.html
-
-* HTML only
-* ⚠️ Do **NOT** include Python code such as:
-
-```python
-return redirect('show_books')
-```
+contains the files: 
 
 ### 📄 success.html
-
+the code exists on the folder myproject/excel_data/templates/excel_data
 * Displays a success message after submission
 
 ---
