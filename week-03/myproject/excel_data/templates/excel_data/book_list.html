@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 6px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        .actions {
+            margin-bottom: 15px;
+        }
+        .actions a {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Books in Library</h2>
+
+<div class="actions">
+    <a href="{% url 'upload_excel' %}">📤 Upload Excel</a>
+    <a href="{% url 'add_book' %}">➕ Add book manually</a>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Entry #</th>
+            <th>Entry Date</th>
+            <th>Author</th>
+            <th>Koha Author</th>
+            <th>Title</th>
+            <th>Publisher</th>
+            <th>Edition</th>
+            <th>Year</th>
+            <th>Place</th>
+            <th>Shape</th>
+            <th>Pages</th>
+            <th>Volume</th>
+            <th>Notes</th>
+            <th>ISBN</th>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for book in books %}
+        <tr>
+            <td>{{ book.entry_number }}</td>
+            <td>{{ book.entry_date|default_if_none:"" }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.koha_author }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.publisher }}</td>
+            <td>{{ book.edition }}</td>
+            <td>{{ book.publish_year }}</td>
+            <td>{{ book.publish_place }}</td>
+            <td>{{ book.shape }}</td>
+            <td>{{ book.pages }}</td>
+            <td>{{ book.volume }}</td>
+            <td>{{ book.notes }}</td>
+            <td>{{ book.isbn }}</td>
+            <td>{{ book.column1 }}</td>
+            <td>{{ book.column2 }}</td>
+        </tr>
+    {% empty %}
+        <tr>
+            <td colspan="16" style="text-align:center;">
+                No books found
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
