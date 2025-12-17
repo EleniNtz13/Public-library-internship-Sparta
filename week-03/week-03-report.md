@@ -60,7 +60,7 @@ for field in Book._meta.fields:
    ```
    Databases → db → Schemas → public → Tables
    ```
-3. Confirm a table named **`book`** exists
+3. Confirm a table named **`excel_data_book`** exists
 4. Verify fields such as:
 
    * `entry_number`
