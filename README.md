@@ -14,9 +14,7 @@ Welcome to the repository documenting my internship experience!
 - Supervisor / Mentor: Library Director
 
 ---
-<!-- Αυτό είναι ένα σχόλιο και δεν θα εμφανιστεί στο render -->
-
-[//]: (να γίνει ένα summup με όλη την διαδικασία -> στο τέλος)
+<!-- (να γίνει ένα summup με όλη την διαδικασία -> στο τέλος)-->
 
 ### 🛠️ Tools & Technologies Used
 
