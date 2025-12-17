@@ -145,9 +145,14 @@ templates/
 ### 📄 add_book.html
 contains the files: 
 
+### book_list
+
 ### 📄 success.html
 the code exists on the folder myproject/excel_data/templates/excel_data
 * Displays a success message after submission
+
+### upload_excel 
+οι κώδικες ολων των αρχειων φαινονται στον φάκελο week-03
 
 ---
 
