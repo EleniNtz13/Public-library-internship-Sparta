@@ -38,7 +38,7 @@ for field in Book._meta.fields:
 ```
 
 ###  Option B: pgAdmin 4
-1. Open pgAdmin 4
+1. Open **pgAdmin 4**
 
 2. Navigate:
 ```
