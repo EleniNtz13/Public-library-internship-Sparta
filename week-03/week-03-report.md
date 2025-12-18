@@ -208,7 +208,7 @@ You now have a complete Django backend that supports:
 
 
 
-<-- # 🌟 Week 3 – Library Management System
+ # 🌟 Week 3 – Library Management System
 
 This week focuses on completing the **full integration between Django forms, views, and the PostgreSQL database**.
 The system now supports **data persistence**, **Excel imports**, and **web-based data management**.
@@ -1126,6 +1126,3 @@ Notes:
 <img width="987" height="372" alt="image" src="https://github.com/user-attachments/assets/0f23251d-876c-42d3-9e73-5a95052a8201" />
 <img width="1012" height="537" alt="image" src="https://github.com/user-attachments/assets/675979b8-fc25-4d9e-adbd-9962dd12f5b0" />
 <img width="1047" height="486" alt="image" src="https://github.com/user-attachments/assets/1a954e04-fc9e-4610-9a21-52b16516e50a" />
-
-
--->
