@@ -17,6 +17,8 @@ During Week 3, the application transitions from initial setup to a **fully funct
 - 🛠️ Database verification via Django Shell & pgAdmin
 - 📦 Pandas & OpenPyXL support
 
+---
+
 ## 1️⃣ Verify Database Table
 ###  Option A: Django Shell
 ```
@@ -185,6 +187,7 @@ Verify:
 - ```.xlsx``` accepted
 - Records imported into PostgreSQL
 
+---
 
 ## ✅ Key Notes
 - 📌 Only .xlsx files supported
