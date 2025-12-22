@@ -1,0 +1,20 @@
+<script>
+    window.onload = function () {
+        const table = document.getElementById("booksTable");
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.rows);
+
+        rows.sort((a, b) => {
+            const idA = Number(a.cells[0].innerText.trim());
+            const idB = Number(b.cells[0].innerText.trim());
+
+            // Αν δεν είναι αριθμός, πάει στο τέλος
+            if (isNaN(idA)) return 1;
+            if (isNaN(idB)) return -1;
+
+            return idA - idB;
+        });
+
+        rows.forEach(row => tbody.appendChild(row));
+    };
+</script>
